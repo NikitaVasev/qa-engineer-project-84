@@ -1,44 +1,131 @@
 ---
+test-cases:
 - summary: |
     Протестируйте добавление товара в корзину и просмотр содержимого корзины
   status: pass
 
+bugreports: []
+
+test-cases:
 - summary: |
     Проверка возможности искать товары по ключевому слову
-  status: pass
+  status: fail
 
+bugreports: 
+- summary: |
+    При поиске товара,изображение товара сужается,цена и вкладка (в корзину) выходит за рамки
+  environment: |
+    Google Chrome   121 (Официальная сборка) (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    - в поиске пишем название товара Iphone 9
+    - Должен отобразится товар который мы искали
+  expected-result: |
+    пользователь может найти товар по ключевому слову
+  actual-result: |
+    пользователь может найти товар,но при поиске товара,изображение товара сужается,цена и вкладка (в корзину) выходит за рамки
+test-cases:
 - summary: |
     Проверка возможности искать товары по категории 
   status: pass
 
+bugreports: []
+
+test-cases:
 - summary: |
     Проверка возможности фильтровать товары 
   status: pass
 
+bugreports: []
+
+test-cases:
 - summary: |
     Проверка сайта на адаптивность под мобильную версию
-  status: fail
+  status: pass
 
+bugreports: []
+
+test-cases:
 - summary: |
     Проверка сайта на совместимость с последними версиями браузеров
   status: pass
 
+bugreports: []
+
+test-cases:
 - summary: |
     проверка возможности просматривать товары и просматривать подробную информацию о товаре
   status: pass
 
- - summary: |
+bugreports: []
+
+test-cases:
+- summary: |
       Доступность сайта на различных устройствах
    status: pass
 
+bugreports: []
+
+test-cases:
  - summary: |
      Проверка сайта на удобство использования и оптимизирования скорости работы
-   status: fail
+   status: pass
 
+bugreports: []
+
+test-cases:
  - summary: |
      Проверка сайта на безопасность и защиту данных пользователя
    status: pass
 
-   - summary: |
+bugreports: []
+
+test-cases:
+ - summary: |
      Проверка сайт на обработку большого количества трафика
    status: faill
+
+bugreports:
+ - summary: |
+    Сайт не корректно обрабатывает большое количество трафика
+  environment: |
+    Google Chrome   121 (Официальная сборка) (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    - Открываем приложение loaddy.com для проверки нагрузки на сайт
+    - Вставляем в поисковую строку ссылку на сайт магазина https://hexlet-products-store.vercel.app/
+    - нажимаем на кнопку проверка
+    - получаем результат
+    expected-result: |
+      Сайт должен обрабатывать большое количество трафика
+    actual-result: |
+      Сайт должен обрабатывать большое количество трафика
+
+test-cases:
+- summary: |
+    Проверка оформления товара через корзину
+  status: faill
+
+bugreports:
+- summary: |
+  При оформлении заказа в корзине происходит ошибка status "500"
+  environment: |
+    Google Chrome   121 (Официальная сборка) (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    - Нажмите кнопку “Добавить в корзину” на странице товара
+    - Проверяем, отображается ли добавленный товар в корзине
+    - Нажимаем на кнопку оформить заказ
+  expected-result: |
+    Заказ должен быть успешно оформлен 
+  actual-result: |
+    При оформлении заказа в корзине происходит ошибка status "500"
+
+test-cases:
+- summary: |
+    Проверка сайта на мультиязычность
+  status: pass
+
+bugreports: []
+
+
