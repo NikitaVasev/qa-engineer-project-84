@@ -62,31 +62,31 @@ bugreports: []
 test-cases:
 - summary: |
       Доступность сайта на различных устройствах
-   status: pass
+  status: pass
 
 bugreports: []
 
 test-cases:
- - summary: |
-     Проверка сайта на удобство использования и оптимизирования скорости работы
-   status: pass
+- summary: |
+    Проверка сайта на удобство использования и оптимизирования скорости работы
+  status: pass
 
 bugreports: []
 
 test-cases:
- - summary: |
-     Проверка сайта на безопасность и защиту данных пользователя
-   status: pass
+- summary: |
+    Проверка сайта на безопасность и защиту данных пользователя
+  status: pass
 
 bugreports: []
 
 test-cases:
- - summary: |
+- summary: |
      Проверка сайт на обработку большого количества трафика
-   status: fail
+  status: fail
 
 bugreports:
- - summary: |
+ -summary: |
     Сайт не корректно обрабатывает большое количество трафика
   environment: |
     Google Chrome   121 (Официальная сборка) (64 бит)
@@ -96,10 +96,10 @@ bugreports:
     - Вставляем в поисковую строку ссылку на сайт магазина https://hexlet-products-store.vercel.app/
     - нажимаем на кнопку проверка
     - получаем результат
-    expected-result: |
-      Сайт должен обрабатывать большое количество трафика
-    actual-result: |
-      Сайт должен обрабатывать большое количество трафика
+  expected-result: |
+    Сайт должен обрабатывать большое количество трафика
+  actual-result: |
+    Сайт должен обрабатывать большое количество трафика
 
 test-cases:
 - summary: |
@@ -108,7 +108,7 @@ test-cases:
 
 bugreports:
 - summary: |
-  При оформлении заказа в корзине происходит ошибка status "500"
+    При оформлении заказа в корзине происходит ошибка status "500"
   environment: |
     Google Chrome   121 (Официальная сборка) (64 бит)
     ОС Windows 10
