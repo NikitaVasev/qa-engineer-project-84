@@ -83,7 +83,7 @@ bugreports: []
 test-cases:
  - summary: |
      Проверка сайт на обработку большого количества трафика
-   status: faill
+   status: fail
 
 bugreports:
  - summary: |
@@ -104,7 +104,7 @@ bugreports:
 test-cases:
 - summary: |
     Проверка оформления товара через корзину
-  status: faill
+  status: fail
 
 bugreports:
 - summary: |
