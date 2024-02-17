@@ -90,10 +90,10 @@ bugreports:
     Сайт не корректно обрабатывает большое количество трафика
   environment: |
     Google Chrome   121 (Официальная сборка) (64 бит)
-    ОС Windows 10
+    ОС Windows 10  
   steps-to-reproduce: |
     - Открываем приложение loaddy.com для проверки нагрузки на сайт
-    - Вставляем в поисковую строку ссылку на сайт магазина https://hexlet-products-store.vercel.app/
+    - Вставляем в поисковую строку ссылку на сайт магазина https://hexlet-products-store.vercel.app
     - нажимаем на кнопку проверка
     - получаем результат
   expected-result: |
