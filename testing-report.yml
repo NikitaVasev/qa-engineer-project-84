@@ -41,15 +41,15 @@
 
 - summary: |
     Проверка сайт на обработку большого количества трафика
-  status: faill
+  status: fail
 
 - summary: |
     Проверка оформления товара через корзину
-  status: faill
+  status: fail
 
 - summary: |
     Проверка сайта на мультиязычность
-  status: faill
+  status: fail
 
    
 
