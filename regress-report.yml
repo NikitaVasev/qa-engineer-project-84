@@ -1,131 +1,125 @@
 ---
 test-cases:
-- summary: |
-    Протестируйте добавление товара в корзину и просмотр содержимого корзины
-  status: pass
-
-bugreports: []
-
-test-cases:
-- summary: |
-    Проверка возможности искать товары по ключевому слову
-  status: fail
-
-bugreports: 
-- summary: |
-    При поиске товара,изображение товара сужается,цена и вкладка (в корзину) выходит за рамки
-  environment: |
-    Google Chrome   121 (Официальная сборка) (64 бит)
-    ОС Windows 10
-  steps-to-reproduce: |
-    - в поиске пишем название товара Iphone 9
-    - Должен отобразится товар который мы искали
-  expected-result: |
-    пользователь может найти товар по ключевому слову
-  actual-result: |
-    пользователь может найти товар,но при поиске товара,изображение товара сужается,цена и вкладка (в корзину) выходит за рамки
-test-cases:
-- summary: |
-    Проверка возможности искать товары по категории 
-  status: pass
-
-bugreports: []
-
-test-cases:
-- summary: |
-    Проверка возможности фильтровать товары 
-  status: pass
-
-bugreports: []
-
-test-cases:
-- summary: |
-    Проверка сайта на адаптивность под мобильную версию
-  status: pass
-
-bugreports: []
-
-test-cases:
-- summary: |
-    Проверка сайта на совместимость с последними версиями браузеров
-  status: pass
-
-bugreports: []
-
-test-cases:
-- summary: |
-    проверка возможности просматривать товары и просматривать подробную информацию о товаре
-  status: pass
-
-bugreports: []
-
-test-cases:
-- summary: |
-      Доступность сайта на различных устройствах
-  status: pass
-
-bugreports: []
-
-test-cases:
-- summary: |
-    Проверка сайта на удобство использования и оптимизирования скорости работы
-  status: pass
-
-bugreports: []
-
-test-cases:
-- summary: |
-    Проверка сайта на безопасность и защиту данных пользователя
-  status: pass
-
-bugreports: []
-
-test-cases:
-- summary: |
-     Проверка сайт на обработку большого количества трафика
-  status: fail
+ - summary: |  
+    Проверка открытия страницы карточки товара
+   status: pass
+ - summary: |
+    Проверка наличия подробной информации о товаре в карточке товара
+   status: pass
+ - summary: |
+    Проверка отображения списка товаров на главной странице
+   status: pass
+ - summary: |
+    Проверка фильтрации товара по производителю
+   status: pass
+ - summary: |
+    Проверка фильтрации товара по наличию
+   status: pass
+ - summary: |
+    Проверка фильтрации товара по цене
+   status: pass
+ - summary: |
+    Проверка фильтрации товара по категории
+   status: pass
+ - summary: |
+     Проверка поиска товара по ключевому слову
+   status: pass
+ - summary: |
+    Проверка работы сайта на мобильном устройстве
+   status: pass
+ - summary: |
+    Проверка работы сайта на планшете
+   status: pass
+ - summary: |
+    Проверка поддержки английского варианта интерфейса
+   status: pass
+ - summary: |
+    Проверка выбора фильтрации по категории "Все товары"
+   status: pass
+ - summary: |
+    Проверка подтверждения оформления заказа при нажатии "Оформить заказ"
+   status: pass
+ - summary: |
+    Проверка добавления товаров в корзину
+   status: pass
+ - summary: |
+    Проверка удаления товара из корзины
+   status: pass
+ - summary: |
+    Проверка возможности перехода вперед по страницам каталога товаров
+   status: pass
+ - summary: |
+    Проверка возможности перехода на предыдущую страницу каталога товаров
+   status: pass
 
 bugreports:
- -summary: |
-    Сайт не корректно обрабатывает большое количество трафика
+
+- summary: |
+    При выключении чекбокса "в наличии" не работают фильтр по цене
   environment: |
-    Google Chrome   121 (Официальная сборка) (64 бит)
-    ОС Windows 10  
+    Yandex Browser Версия 23.11.3.965 (64-bit)
+    ОС Windows 10 Version 22H2
   steps-to-reproduce: |
-    - Открываем приложение loaddy.com для проверки нагрузки на сайт
-    - Вставляем в поисковую строку ссылку на сайт магазина https://hexlet-products-store.vercel.app
-    - нажимаем на кнопку проверка
-    - получаем результат
+    1. https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Снимаем чекбокс "В наличие"
+    3. Вводим в поле сортировки товара по цене диапозон от 100 до 500
   expected-result: |
-    Сайт должен обрабатывать большое количество трафика
+    Выводится список товаров в диапозоне от 100 до 500
   actual-result: |
-    Сайт должен обрабатывать большое количество трафика
+   Сортировка товара на странице не происходит ( https://github.com/kondratievSE/qa-engineer-project-84/blob/d7a18c6e471447d081a950359990632fc3373b10/Screenshots/10.png )
+
+- summary: |
+    При выключении чекбокса "в наличии" не работает фильтр по производителю
+  environment: |
+    Yandex Browser Версия 23.11.3.965 (64-bit)
+    ОС Windows 10 Version 22H2
+  steps-to-reproduce: |
+    1. https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Снимаем чекбокс "В наличие"
+    3. Включаем чекбокс по Производителю
+  expected-result: |
+    Выводится список товаров выбранного Производителя
+  actual-result: |
+   Сортировка товара по производителю не происходит ( https://github.com/kondratievSE/qa-engineer-project-84/blob/d7a18c6e471447d081a950359990632fc3373b10/Screenshots/11.png )
+
+- summary: |
+    При выключении чекбокса "в наличии" не работает поиск товаров
+  environment: |
+    Yandex Browser Версия 23.11.3.965 (64-bit)
+    ОС Windows 10 Version 22H2
+  steps-to-reproduce: |
+    1. https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Снимаем чекбокс "В наличие"
+    3. В строке поиска товаров вводим название Производителя
+  expected-result: |
+    Выводится список товаров совпадающий по названию с введенным в поиске
+  actual-result: |
+   Сортировка товара по поисковой строке не производится ( https://github.com/kondratievSE/qa-engineer-project-84/blob/d7a18c6e471447d081a950359990632fc3373b10/Screenshots/15.png )
     
-test-cases:
 - summary: |
-    Проверка оформления товара через корзину
-  status: fail
-
-bugreports:
-- summary: |
-    При оформлении заказа в корзине происходит ошибка status "500"
+    Не сохраняется русский язык интерфейса
   environment: |
-    Google Chrome   121 (Официальная сборка) (64 бит)
-    ОС Windows 10
+    Yandex Browser Версия 23.11.3.965 (64-bit)
+    ОС Windows 10 Version 22H2
   steps-to-reproduce: |
-    - Нажмите кнопку “Добавить в корзину” на странице товара
-    - Проверяем, отображается ли добавленный товар в корзине
-    - Нажимаем на кнопку оформить заказ
+    1. https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Выбираем язык интерфейса русский
+    3. Переходим в корзину
+    4. Нажимаем кнопку "Магазин"
   expected-result: |
-    Заказ должен быть успешно оформлен 
+    Пользователь видит главную страницу с интерфейсом на русском языке
   actual-result: |
-    При оформлении заказа в корзине происходит ошибка status "500"
+    Пользователь видит главную страницу с интерфейсом на английском языке
 
-test-cases:
 - summary: |
-    Проверка сайта на мультиязычность
-  status: pass
-
-bugreports: []
-
-
+    Едет верстка, если при сортировке на главной странице выводится один товар 
+  environment: |
+    Yandex Browser Версия 23.11.3.965 (64-bit)
+    ОС Windows 10 Version 22H2
+  steps-to-reproduce: |
+    1. Выбираем главную страницу сайта
+    2. Подбираем сортировку, чтобы на главной странице был один товар
+  expected-result: |
+    Пользователь видит главную страницу с товаром
+  actual-result: |
+    Пользователь видит главную страницу с дефектами верстки ( https://github.com/kondratievSE/qa-engineer-project-84/blob/3ebfce0053aa76a9cf531100956bf732b44f6154/Screenshots/7.png )
