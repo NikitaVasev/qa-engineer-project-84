@@ -111,4 +111,4 @@
   expected-result: |
     В Devtools видим отправленный запрос с корректными данными товаров (формы заказа) и код 2хх
   actual-result: |
-    В Devtools не видим отправку запроса с данными заказа 
+    В Devtools видим ошибку falied {status: "500", title: "failed", type: "about:blank", detail: "failed", message: "failed"}
