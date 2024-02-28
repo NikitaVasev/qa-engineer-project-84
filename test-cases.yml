@@ -65,7 +65,7 @@
     При вводе значения отображаются товары заданой цены
   prerequisites: |
     Открыта главная страница товаров
-  test-data:https://hexlet-products-store.vercel.app/
+  test-data: https://hexlet-products-store.vercel.app/
   steps:
     - в модальном окне "Price frome" вводим значение "500"
   expected-result: |
