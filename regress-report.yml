@@ -17,7 +17,7 @@ test-cases:
    status: pass
  - summary: |
     Проверка фильтрации товара по цене
-   status: pass
+   status: fail
  - summary: |
     Проверка фильтрации товара по категории
    status: pass
@@ -32,7 +32,7 @@ test-cases:
    status: pass
  - summary: |
     Проверка поддержки английского варианта интерфейса
-   status: pass
+   status: fail
  - summary: |
     Проверка выбора фильтрации по категории "Все товары"
    status: pass
@@ -43,6 +43,9 @@ test-cases:
     Проверка добавления товаров в корзину
    status: pass
  - summary: |
+    Проверка добавления одинаковых товаров в корзину
+   status: pass
+ - summary: |
     Проверка удаления товара из корзины
    status: pass
  - summary: |
@@ -51,7 +54,20 @@ test-cases:
  - summary: |
     Проверка возможности перехода на предыдущую страницу каталога товаров
    status: pass
-
+ - summary: |
+    Проверка кликабельного хэштега на странице товара
+   status: pass
+ - summary: |
+    Тестирование фильтра при некорректном запросе(строка поиска)
+   status: fail
+ - summary: |
+    Проверка перехода на страницу оплаты
+   status: fail
+ - summary: |
+    Проверка запросов в DevTools
+   status: fail
+   
+   
 bugreports:
 
 - summary: |
